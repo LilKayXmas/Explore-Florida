@@ -10,7 +10,7 @@
         android:id="@+id/attractionNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Attraction Name"
+        android:text="@string/attraction_name"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="8dp"/>
@@ -19,7 +19,7 @@
         android:id="@+id/attractionDescriptionTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Attraction Description"
+        android:text="@string/attraction_description"
         android:textSize="16sp"
         android:layout_marginTop="8dp"/>
 
@@ -27,8 +27,10 @@
         android:id="@+id/commentEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your comments"
-        android:padding="12dp"/> <!-- Increased padding for better touch target -->
+        android:hint="@string/enter_comments_hint"
+        android:padding="12dp"
+        android:autofillHints="comment"
+        android:inputType="textMultiLine|textCapSentences"/>
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -42,16 +44,14 @@
         android:id="@+id/submitFeedbackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit Feedback"
+        android:text="@string/submit_feedback"
         android:layout_marginTop="16dp"/>
-
 
     <Button
         android:id="@+id/provideAdditionalFeedbackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Provide Additional Feedback"
+        android:text="@string/provide_additional_feedback"
         android:layout_marginTop="16dp"/>
-
 
 </LinearLayout>

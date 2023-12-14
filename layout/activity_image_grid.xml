@@ -18,7 +18,8 @@
         android:src="@drawable/placeholder_image"
         android:scaleType="centerCrop"
         android:clickable="true"
-        android:contentDescription="Description for image 1"/>
+        android:focusable="true"
+        android:contentDescription="@string/image1_content_description"/>
 
     <ImageView
         android:id="@+id/image2"
@@ -30,7 +31,8 @@
         android:src="@drawable/placeholder_image"
         android:scaleType="centerCrop"
         android:clickable="true"
-        android:contentDescription="Description for image 2"/>
+        android:focusable="true"
+        android:contentDescription="@string/image2_content_description"/>
 
     <ImageView
         android:id="@+id/image3"
@@ -42,7 +44,8 @@
         android:src="@drawable/placeholder_image"
         android:scaleType="centerCrop"
         android:clickable="true"
-        android:contentDescription="Description for image 3"/>
+        android:focusable="true"
+        android:contentDescription="@string/image3_content_description"/>
 
     <ImageView
         android:id="@+id/image4"
@@ -54,6 +57,7 @@
         android:src="@drawable/placeholder_image"
         android:scaleType="centerCrop"
         android:clickable="true"
-        android:contentDescription="Description for image 4"/>
+        android:focusable="true"
+        android:contentDescription="@string/image4_content_description"/>
 
 </GridLayout>
