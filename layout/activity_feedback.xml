@@ -1,35 +1,37 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".FeedbackActivity">
 
     <TextView
+        android:id="@+id/textViewFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/feedback_form_title"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:text="Provide Your Feedback"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"/>
 
     <EditText
-        android:id="@+id/feedbackEditText"
+        android:id="@+id/editTextFeedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/feedback_edittext_hint"
-        android:inputType="textMultiLine|textCapSentences"
-        android:autofillHints="feedback"
-        android:padding="16dp"
+        android:layout_below="@id/textViewFeedback"
+        android:hint="Enter your feedback"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="@android:color/black"
-    android:background="@android:color/white"/>
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"/> <!-- Add padding to increase touch target -->
 
-    <Button
-        android:id="@+id/submitFeedbackButton"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSubmitFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submit_feedback"/>
+        android:layout_below="@id/editTextFeedback"
+        android:layout_centerHorizontal="true"
+        android:text="Submit Feedback"
+        android:paddingVertical="12dp"
+        android:layout_marginTop="16dp"/>
 
-
-</LinearLayout>
+</RelativeLayout>
