@@ -2,12 +2,10 @@ package com.example.exploreflorida;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.bumptech.glide.Glide;
 
 public class AttractionDetailsActivity extends AppCompatActivity {
@@ -37,27 +35,21 @@ public class AttractionDetailsActivity extends AppCompatActivity {
                 .into(attractionImageView);
 
         // Add click listener to the Load Website button
-        loadWebsiteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Start ExploreWebActivity with the attraction's website URL
-                String attractionWebsite = getIntent().getStringExtra("attractionWebsite");
-                if (attractionWebsite != null && !attractionWebsite.isEmpty()) {
-                    Intent intent = new Intent(AttractionDetailsActivity.this, ExploreWebActivity.class);
-                    intent.putExtra("websiteUrl", attractionWebsite);
-                    startActivity(intent);
-                }
+        loadWebsiteButton.setOnClickListener(view -> {
+            // Start ExploreWebActivity with the attraction's website URL
+            String attractionWebsite = getIntent().getStringExtra("attractionWebsite");
+            if (attractionWebsite != null && !attractionWebsite.isEmpty()) {
+                Intent intent = new Intent(AttractionDetailsActivity.this, ExploreWebActivity.class);
+                intent.putExtra("websiteUrl", attractionWebsite);
+                startActivity(intent);
             }
         });
 
         // Add click listener to the Feedback button
-        feedbackButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Start AttractionFeedbackActivity
-                Intent intent = new Intent(AttractionDetailsActivity.this, AttractionFeedbackActivity.class);
-                startActivity(intent);
-            }
+        feedbackButton.setOnClickListener(view -> {
+            // Start AttractionFeedbackActivity
+            Intent intent = new Intent(AttractionDetailsActivity.this, AttractionFeedbackActivity.class);
+            startActivity(intent);
         });
     }
 }

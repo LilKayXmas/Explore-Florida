@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button exploreWebButton = findViewById(R.id.exploreWebButton);
 
         exploreButton.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, AttractionsListActivity.class);
+            Intent intent = new Intent(MainActivity.this, Categories.class);
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             } else {
