@@ -42,8 +42,14 @@ public class AttractionDetailsActivity extends AppCompatActivity {
                 Intent intent = new Intent(AttractionDetailsActivity.this, ExploreWebActivity.class);
                 intent.putExtra("websiteUrl", attractionWebsite);
                 startActivity(intent);
+
+                // Commented out the following lines as they were not needed
+                // Create an Intent to view the website
+                // Intent websiteIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(selectedAttraction.getWebsite()));
+                // startActivity(websiteIntent);
             }
         });
+
 
         // Add click listener to the Feedback button
         feedbackButton.setOnClickListener(view -> {

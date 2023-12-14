@@ -63,17 +63,18 @@ public class AttractionsListActivity extends AppCompatActivity {
             Attraction selectedAttraction = attractionsList.get(position);
 
             // Create an Intent to navigate to AttractionDetailsActivity
-            Intent intent = new Intent(AttractionsListActivity.this, AttractionDetailsActivity.class);
+            Intent detailsIntent = new Intent(AttractionsListActivity.this, AttractionDetailsActivity.class);
 
             // Pass information about the selected attraction to the details screen
-            intent.putExtra("attractionName", selectedAttraction.getName());
-            intent.putExtra("attractionDescription", selectedAttraction.getDescription());
-            intent.putExtra("attractionImageResource", selectedAttraction.getImageResource());
-            intent.putExtra("attractionWebsite", selectedAttraction.getWebsite()); // Provide the website URL
+            detailsIntent.putExtra("attractionName", selectedAttraction.getName());
+            detailsIntent.putExtra("attractionDescription", selectedAttraction.getDescription());
+            detailsIntent.putExtra("attractionImageResource", selectedAttraction.getImageResource());
+            detailsIntent.putExtra("attractionWebsite", selectedAttraction.getWebsite()); // Provide the website URL
 
             // Start AttractionDetailsActivity
-            startActivity(intent);
+            startActivity(detailsIntent);
         });
+
     }
 
     // Placeholder method to get a list of attraction names
